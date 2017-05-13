@@ -1,0 +1,25 @@
+<h2>Your Rooms</h2>
+
+<% if (successMessage.length > 0) { %>
+  <div class="success"><%= successMessage %></div>
+<% } %>
+
+<% if (rooms.length === 0) { %>
+
+  <div class="error">
+    You don't have any rooms yet.
+    <a style="color: white" href="/rooms/new">Create one</a>!
+  </div>
+
+<% } else { %>
+  <ul style="list-style: none">
+
+    <% rooms.forEach( (oneRoom) => { %>
+      <li>
+        <h3><%= oneRoom.name %></h3>
+        <p><%= oneRoom.description %></p>
+        <img src="<%= oneRoom.photoAddress %>">
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

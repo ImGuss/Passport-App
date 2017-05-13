@@ -1,0 +1,30 @@
+<h2>Edit Profile (this won't work)</h2>
+
+<% if (typeof successMessage !== 'undefined' && successMessage.length > 0) { %>
+  <div class="success"><%= successMessage %></div>
+<% } %>
+
+<form class="edit-profile-form" action="/profile/edit" method="post">
+
+  <label for="name-input">Name</label>
+  <br>
+  <input id="name-input" type="text" name="profileName" value="<%= user.name %>">
+  <br><br>
+
+  <label for="username-input">Username</label>
+  <br>
+  <input id="username-input" type="text" name="profileUsername" value="<%= user.username %>">
+  <br><br>
+
+  <label for="current-password-input">Current Password</label>
+  <br>
+  <input id="current-password-input" type="password" name="profileCurrentPassowrd">
+  <br><br>
+
+  <label for="new-password-input">New Password</label>
+  <br>
+  <input id="new-password-input" type="password" name="profileNewPassowrd">
+  <br><br>
+
+  <button>Save Changes</button>
+</form>
