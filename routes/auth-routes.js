@@ -97,6 +97,7 @@ authRoutes.post('/login', passport.authenticate('local',
   }
 ));
 
+// user logout
 authRoutes.get('/logout', (req, res, next) => {
   req.logout();
 
